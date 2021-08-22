@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<h2>Something went wrong...</h2>
+<form th:action="@{/parse}" th:method="get">
+  <input type="submit" value="Try again" />
+</form>
+</body>
+</html>

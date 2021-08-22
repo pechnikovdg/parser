@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS word;
+
+CREATE SEQUENCE IF NOT EXISTS global_seq START WITH 1 INCREMENT BY 50;
+
+CREATE TABLE word
+(
+    id        LONG DEFAULT NEXT VALUE FOR global_seq PRIMARY KEY,
+    url       VARCHAR(255) NOT NULL,
+    content   VARCHAR(255) NOT NULL,
+    frequency INTEGER      NOT NULL
+);
+CREATE INDEX url_index ON word (url);
