@@ -18,14 +18,14 @@
         <td><span th:text="${word.content}"></span></td>
         <td><span th:text="${word.frequency}"></span></td>
     </tr>
-
-
     </tbody>
 </table>
 
+<p>
 <form th:action="@{/save}"  th:method="post">
     <input type="submit" value="Save statistics"/>
 </form>
+<p>
 <form th:action="@{/parse}" th:method="get">
     <input type="submit" value="New parse request"/>
 </form>
